@@ -1,0 +1,32 @@
+import { NotebookTabs } from "lucide-react"
+
+import { UserForm } from "@/components/user-register-form"
+
+export default function UserRegister() {
+  return (
+    <div className="grid min-h-svh lg:grid-cols-2">
+      <div className="flex flex-col gap-4 p-6 md:p-10">
+        <div className="flex justify-center gap-2 md:justify-start">
+          <a href="#" className="flex items-center gap-2 font-medium text-[#eb9200]">
+            <div className="bg-[#eb9200] text-primary-foreground flex size-8 items-center justify-center rounded-md">
+              <NotebookTabs className="size-6" />
+            </div>
+            TeamScribe
+          </a>
+        </div>
+        <div className="flex flex-1 items-center justify-center">
+          <div className="w-full max-w-xs">
+            <UserForm />
+          </div>
+        </div>
+      </div>
+      <div className="bg-muted relative hidden lg:block">
+        <img
+          src="/login-bg.jpg"
+          alt="Image"
+          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+        />
+      </div>
+    </div>
+  )
+}
